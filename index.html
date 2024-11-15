@@ -19,7 +19,8 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#join">Join Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#poll">Poll</a></li>
+                <li><a href="#support">Support</a></li>
             </ul>
         </nav>
     </header>
@@ -33,23 +34,44 @@
             <p>Be part of our growing community and explore the world of coffee with like-minded individuals.</p>
             <a href="https://discord.gg/kj43T3t46A" class="join-button">Join Us on Discord</a>
         </section>
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>Have questions? Feel free to reach out via Discord or our social media channels.</p>
+        <section id="poll" class="section">
+            <h2>Community Poll</h2>
+            <p>What's your favorite type of coffee?</p>
+            <form id="poll-form">
+                <label>
+                    <input type="radio" name="coffee" value="Espresso"> Espresso
+                </label><br>
+                <label>
+                    <input type="radio" name="coffee" value="Latte"> Latte
+                </label><br>
+                <label>
+                    <input type="radio" name="coffee" value="Cappuccino"> Cappuccino
+                </label><br>
+                <label>
+                    <input type="radio" name="coffee" value="Americano"> Americano
+                </label><br>
+                <button type="submit" class="vote-button">Vote</button>
+            </form>
+            <p id="poll-result" style="display:none;">Thanks for voting!</p>
+        </section>
+        <section id="support" class="section">
+            <h2>Support Coffee Gang</h2>
+            <p>If you enjoy being part of the Coffee Gang, consider supporting us with a Bitcoin donation!</p>
+            <div class="btc-donation">
+                <p><strong>Bitcoin Address:</strong> <code>bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</code></p>
+                <a href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc" class="donate-button">Donate BTC via Bitcoin Core</a>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Coffee Gang. All Rights Reserved.</p>
     </footer>
+    <script>
+        // Poll submission handling
+        document.getElementById('poll-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from refreshing the page
+            document.getElementById('poll-result').style.display = 'block'; // Show thank-you message
+        });
+    </script>
 </body>
 </html>
-
-<section id="support" class="section">
-    <h2>Support Coffee Gang</h2>
-    <p>If you enjoy being part of the Coffee Gang, consider supporting us with a Bitcoin donation!</p>
-    <div class="btc-donation">
-        <p><strong>Bitcoin Address:</strong> bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</p>
-        <a href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc" class="donate-button">Donate BTC</a>
-    </div>
-</section>
-
