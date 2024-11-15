@@ -52,14 +52,6 @@ body {
     text-align: center;
 }
 
-#about, #contact {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
 .section h2 {
     font-size: 1.8rem;
     color: #3e2723;
@@ -86,16 +78,29 @@ body {
     background-color: #5d4037; /* Darker brown for hover */
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #3e2723;
+/* Poll styles */
+.vote-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
     color: #fff;
-    font-size: 0.9rem;
-    margin-top: 20px;
+    background-color: #3e2723;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.vote-button:hover {
+    background-color: #5d4037;
+}
+
+#poll-result {
+    font-size: 1.1rem;
+    color: #3e2723;
+    margin-top: 10px;
+}
+
+/* Bitcoin donation styles */
 .btc-donation {
     margin-top: 20px;
     padding: 20px;
@@ -108,6 +113,7 @@ footer {
 .btc-donation p {
     font-size: 1rem;
     color: #3e2723;
+    word-wrap: break-word;
 }
 
 .donate-button {
@@ -124,5 +130,15 @@ footer {
 
 .donate-button:hover {
     background-color: #5d4037;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3e2723;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
 
