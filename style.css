@@ -95,3 +95,34 @@ footer {
     font-size: 0.9rem;
     margin-top: 20px;
 }
+
+.btc-donation {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff8e1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btc-donation p {
+    font-size: 1rem;
+    color: #3e2723;
+}
+
+.donate-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #795548; /* Medium coffee brown */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #5d4037;
+}
+
