@@ -11,6 +11,7 @@ body {
 /* Header styles */
 .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
@@ -33,14 +34,25 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
+}
+
+.nav-links li {
+    display: inline-block;
+    position: relative;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    padding: 10px 15px;
     transition: color 0.3s ease;
+    border-left: 1px solid #795548; /* Separator line between tabs */
+}
+
+.nav-links li:first-child a {
+    border-left: none; /* Remove line before the first tab */
 }
 
 .nav-links a:hover {
@@ -89,6 +101,12 @@ body {
 }
 
 /* Poll styles */
+#poll-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
 .vote-button {
     margin-top: 15px;
     padding: 10px 25px;
@@ -159,4 +177,59 @@ footer {
     color: #fff;
     font-size: 0.9rem;
     margin-top: 30px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .section {
+        padding: 30px 5%;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    #poll-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .vote-button {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .btc-donation {
+        padding: 15px;
+    }
+
+    .btc-address {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .donate-button {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
 }
