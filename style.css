@@ -123,14 +123,17 @@ button:hover, .join-button:hover, .vote-button:hover, .donate-button:hover {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* Random stars */
 .star {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url('starstarstar.png') no-repeat center/contain;
-    animation: float 8s ease-in-out infinite;
-    opacity: 0.8;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    background-image: url('starstarstar.png'); /* Ensure this is the correct path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10; /* Keep the stars above most elements */
+}
+
 }
 
 /* Animation for stars */
