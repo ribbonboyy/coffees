@@ -3,8 +3,7 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background: radial-gradient(circle, #001d33 0%, #003366 100%);
+    background-color: #001d33;
     color: #f5f5f5;
     overflow-x: hidden;
     text-align: center;
@@ -16,9 +15,8 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: #0d233d;
+    background-color: #0d233d;
     color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo h1 {
@@ -47,11 +45,6 @@ body {
     font-weight: 600;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.nav-links a:hover {
-    background: rgba(0, 188, 212, 0.1);
 }
 
 /* Section Styling */
@@ -59,10 +52,9 @@ body {
     padding: 40px 5%;
     max-width: 1200px;
     margin: 30px auto;
-    background: rgba(255, 255, 255, 0.05);
+    background-color: #002544;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    position: relative;
+    color: #f5f5f5;
 }
 
 /* Section Title */
@@ -70,7 +62,6 @@ body {
     font-size: 2.2rem;
     color: #00bcd4;
     margin-bottom: 20px;
-    text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.5);
 }
 
 /* Text Styling */
@@ -90,9 +81,8 @@ body {
 .rule {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background-color: #002b4f;
 }
 
 .rule h4 {
@@ -118,7 +108,6 @@ button, .join-button, .donate-button, .vote-button, .expand-rules-button {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    transition: background 0.3s ease;
 }
 
 button:hover, .join-button:hover, .donate-button:hover, .vote-button:hover, .expand-rules-button:hover {
@@ -142,7 +131,6 @@ button:hover, .join-button:hover, .donate-button:hover, .vote-button:hover, .exp
 
     .section {
         padding: 30px 5%;
-        box-shadow: none; /* Reduce shadow on mobile for simplicity */
     }
 
     .section h2 {
