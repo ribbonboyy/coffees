@@ -24,67 +24,71 @@ body {
 .logo h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #61dafb;
-    text-shadow: 0 3px 10px rgba(97, 218, 251, 0.5);
-    text-align: center;
-    width: 100%;
+    color: #ffba08;
+    text-shadow: 0 3px 10px rgba(255, 186, 8, 0.5);
+}
+
+.logo p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #d3d4db;
+    margin-top: 5px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+    gap: 15px;
 }
 
 .nav-links a {
     color: #f5f5f5;
     text-decoration: none;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #61dafb;
-    background: rgba(97, 218, 251, 0.1);
+    color: #ffba08;
+    background: rgba(255, 186, 8, 0.1);
 }
 
-/* Hero Section */
+/* Section Styling */
 .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 60px 10%;
     text-align: center;
-    padding: 100px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    max-width: 1200px;
     color: #f5f5f5;
 }
 
 .section h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 0px 0px 10px rgba(97, 218, 251, 0.7);
+    color: #ffba08;
+    text-shadow: 0px 0px 10px rgba(255, 186, 8, 0.5);
 }
 
 .section p {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
     color: #d3d4db;
 }
 
+/* Join Button */
 .join-button {
     display: inline-block;
     padding: 15px 40px;
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(90deg, #0f7cff, #007bff);
+    background: linear-gradient(90deg, #ff8c00, #ffba08);
     border: none;
     border-radius: 50px;
     text-decoration: none;
@@ -93,42 +97,130 @@ body {
 }
 
 .join-button:hover {
-    background: linear-gradient(90deg, #007bff, #0f7cff);
+    background: linear-gradient(90deg, #ffba08, #ff8c00);
     transform: translateY(-5px);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Panels */
-#poll-container, .rules-container, .btc-donation {
+/* Poll Container */
+#poll-container {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     max-width: 600px;
     margin: 30px auto;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1);
+    color: #f5f5f5;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#poll-container:hover, .rules-container:hover, .btc-donation:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-    background: rgba(255, 255, 255, 0.08);
+.vote-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #ffba08;
+    color: #000814;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.vote-button:hover {
+    background: #ff8c00;
+}
+
+/* Rules Container */
+.rules-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rules-content {
+    display: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.rules-content h4 {
+    margin-bottom: 10px;
+    color: #ffba08;
+}
+
+.expand-rules-button {
+    padding: 10px 25px;
+    background: #ffba08;
+    color: #000814;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.expand-rules-button:hover {
+    background: #ff8c00;
+}
+
+/* Reviews */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.review {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.review-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #d3d4db;
+}
+
+.review-author {
+    font-weight: 600;
+    color: #ffba08;
+}
+
+/* BTC Donation Section */
+.btc-donation {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ffba08;
+    color: #000814;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.donate-button:hover {
+    background: #ff8c00;
 }
 
 /* Footer */
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
     background: #121a2b;
-    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
     font-size: 0.9rem;
-    margin-top: 50px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    color: #d3d4db;
 }
