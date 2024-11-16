@@ -1,272 +1,130 @@
-/* General Reset */
-body, html {
+/* GLOBAL STYLES */
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #001f3f, #005f8f);
-    color: #ffffff;
-    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #003b70, #00509e);
+    color: #e6ffff;
+    overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header */
-.header {
+header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background: linear-gradient(135deg, #003366, #005f8f);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid #00c8ff;
-    transition: transform 0.3s ease-in-out;
+    background-color: #004a80;
+    color: #e6ffff;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
 }
 
-.header:hover {
-    transform: scale(1.05);
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #00e1ff;
+    transition: transform 0.3s ease;
 }
 
-.header .logo h1 {
-    font-size: 2rem;
-    color: #00c8ff;
-    font-weight: 700;
-}
-
-.header .logo p {
-    font-size: 0.9rem;
-    color: #bfefff;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    color: #ffffff;
-    font-weight: 600;
-    padding: 5px 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.nav-links li a:hover {
+header h1:hover {
     transform: scale(1.1);
 }
 
-/* Section Styling */
+header p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6ffff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00e1ff;
+}
+
+/* SECTIONS */
 .section {
-    padding: 60px 10%;
+    padding: 40px 10%;
     text-align: center;
-    background: linear-gradient(135deg, #003366 50%, #005f8f 50%);
-    color: #ffffff;
-    transition: transform 0.3s ease-in-out;
-}
-
-.section:hover {
-    transform: scale(1.02);
-}
-
-.section:nth-child(even) {
-    background: linear-gradient(135deg, #005f8f, #003366);
+    background: linear-gradient(145deg, #003b70, #00509e);
+    color: #e6ffff;
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .section h2 {
     font-size: 2rem;
-    color: #00c8ff;
+    color: #00e1ff;
+    margin-bottom: 15px;
+}
+
+/* ABOUT SECTION */
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 
-.section p {
-    line-height: 1.6;
-    color: #e6f7ff;
-}
-
-.join-button,
-.vote-button,
-.donate-button {
+.join-button {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-    background: linear-gradient(135deg, #00c8ff, #005f8f);
+    font-size: 1.1rem;
+    color: #003b70;
+    background: #00e1ff;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.join-button:hover,
-.vote-button:hover,
-.donate-button:hover {
-    transform: scale(1.2);
-    background-color: #003366;
-}
-
-/* Poll Styling */
-.poll-options label {
-    display: block;
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #bfefff;
-}
-
-.vote-button {
-    background-color: #00c8ff;
-}
-
-.vote-button:hover {
-    background-color: #002a5c;
-}
-
-/* Rules Section */
-.rules-container {
-    margin: auto;
-    padding: 20px;
-    max-width: 800px;
-    background: rgba(0, 95, 143, 0.8);
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
-}
-
-.rules-content {
-    display: none;
-    text-align: left;
-    margin-top: 20px;
-}
-
-.rules-content .rule h4 {
-    color: #00c8ff;
-    margin-bottom: 5px;
-}
-
-.expand-rules-button {
-    background: #003366;
-    color: #00c8ff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.expand-rules-button:hover {
+.join-button:hover {
     transform: scale(1.1);
-    background: #00c8ff;
-    color: #003366;
-}
-
-/* Reviews Section */
-.reviews-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.review {
-    background: rgba(0, 47, 75, 0.9);
-    padding: 20px;
-    border-radius: 15px;
-    width: 300px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transform: scale(0.9);
-    transition: transform 0.3s;
-}
-
-.review:hover {
-    transform: scale(1.1);
-}
-
-.review-text {
-    font-style: italic;
-    color: #e6f7ff;
-}
-
-.review-author {
-    text-align: right;
-    font-weight: 600;
-    color: #00c8ff;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #003366, #001f3f);
-    color: #bfefff;
-    font-size: 0.9rem;
-}
-
-/* Responsive Design for Phones */
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .section {
-        padding: 40px 5%;
-    }
-
-    .rules-container {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-
-    .review {
-        width: 90%;
-    }
-
-    .join-button,
-    .vote-button,
-    .donate-button {
-        width: 80%;
-        padding: 15px 0;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* REVIEWS SECTION */
 .reviews-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 .review {
-    flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
-    background: linear-gradient(145deg, #003b70, #00509e);
+    flex: 1 1 calc(33.333% - 20px);
+    background: linear-gradient(145deg, #004a80, #005cbf);
     color: #e6ffff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .review:hover {
-    transform: scale(1.1); /* Grow slightly */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .review-text {
@@ -280,11 +138,72 @@ footer {
     font-size: 1rem;
 }
 
-/* RESPONSIVENESS */
-@media (max-width: 768px) {
-    .review {
-        flex: 1 1 100%; /* Stack reviews vertically on smaller screens */
-        margin-bottom: 15px;
-    }
+/* POLL SECTION */
+#poll-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.poll-options label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.vote-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #003b70;
+    background: #00e1ff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vote-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px 10%;
+    background: #004a80;
+    color: #e6ffff;
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .review {
+        flex: 1 1 100%; /* Stack reviews vertically */
+    }
+
+    .section {
+        padding: 30px 5%;
+    }
+
+    .join-button, .vote-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
