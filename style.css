@@ -129,28 +129,6 @@ button:hover, .join-button:hover, .donate-button:hover, .vote-button:hover, .exp
     margin: 10px auto;
 }
 
-/* Cyan Beam Effect (Desktop Only) */
-@media (min-width: 769px) {
-    .section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 10px;
-        background: linear-gradient(45deg, #00bcd4, #00796b);
-        background-size: 400% 400%;
-        animation: beamAnimation 5s infinite linear;
-        z-index: -1;
-    }
-
-    @keyframes beamAnimation {
-        0% { background-position: 400% 0; }
-        100% { background-position: 0 400%; }
-    }
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .header {
@@ -165,10 +143,6 @@ button:hover, .join-button:hover, .donate-button:hover, .vote-button:hover, .exp
     .section {
         padding: 30px 5%;
         box-shadow: none; /* Reduce shadow on mobile for simplicity */
-    }
-
-    .section::before {
-        display: none; /* Disable cyan beam effect on mobile */
     }
 
     .section h2 {
