@@ -243,3 +243,48 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+/* REVIEWS SECTION */
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.review {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+    background: linear-gradient(145deg, #003b70, #00509e);
+    color: #e6ffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+.review:hover {
+    transform: scale(1.1); /* Grow slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.review-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    .review {
+        flex: 1 1 100%; /* Stack reviews vertically on smaller screens */
+        margin-bottom: 15px;
+    }
+}
+
