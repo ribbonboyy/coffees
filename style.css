@@ -305,21 +305,50 @@ h1, h2 {
 }
 
 /* Reviews Section */
-#reviews-section {
-    padding: 60px 20px;
+#reviews {
     background: linear-gradient(180deg, #010716, #0a0f24);
+    padding: 60px 20px;
+    color: #fff;
     text-align: center;
     border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-#reviews-section h2 {
+#reviews h2 {
     font-size: 2.5rem;
     color: #61dafb;
     text-shadow: 0px 0px 12px rgba(97, 218, 251, 1);
+    margin-bottom: 40px;
 }
 
-/* Fluid Transitions for Buttons and Links */
-button, a {
-    transition: all 0.3s ease-in-out;
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
+.review {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.review-text {
+    font-size: 1rem;
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #61dafb;
+}
