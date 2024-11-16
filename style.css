@@ -19,7 +19,6 @@ body {
     background: #121a2b;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
 }
 
 .logo h1 {
@@ -27,12 +26,17 @@ body {
     font-weight: 700;
     color: #61dafb;
     text-shadow: 0 3px 10px rgba(97, 218, 251, 0.5);
+    text-align: center;
+    width: 100%; /* Ensures the logo stays on its own row on smaller screens */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .nav-links a {
@@ -61,7 +65,7 @@ body {
 }
 
 .section h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-shadow: 0px 0px 10px rgba(97, 218, 251, 0.7);
@@ -89,6 +93,8 @@ button, .join-button, .vote-button, .donate-button {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
+    text-align: center;
+    width: 80%; /* Default button size adjustment for smaller screens */
 }
 
 button:hover, .join-button:hover, .vote-button:hover, .donate-button:hover {
@@ -117,28 +123,6 @@ button:hover, .join-button:hover, .vote-button:hover, .donate-button:hover {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* Poll content */
-.poll-question {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #61dafb;
-    margin-bottom: 20px;
-    text-shadow: 0px 0px 8px rgba(97, 218, 251, 0.8);
-}
-
-.poll-options label {
-    display: block;
-    font-size: 1.2rem;
-    color: #d3d4db;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.vote-button {
-    width: 100%;
-    padding: 15px 0;
-}
-
 /* Footer */
 footer {
     display: flex;
@@ -163,13 +147,6 @@ footer {
     border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-#reviews h2 {
-    font-size: 2.5rem;
-    color: #61dafb;
-    text-shadow: 0px 0px 12px rgba(97, 218, 251, 1);
-    margin-bottom: 40px;
-}
-
 .reviews-container {
     display: flex;
     flex-wrap: wrap;
@@ -191,35 +168,24 @@ footer {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-.review-text {
-    font-size: 1rem;
-    font-style: italic;
-    color: #ddd;
-    margin-bottom: 10px;
-}
-
-.review-author {
-    font-weight: bold;
-    color: #61dafb;
-}
-
-/* Responsive Design */
+/* Responsive Design for Tablets */
 @media screen and (max-width: 768px) {
     .section {
         padding: 50px 5%;
     }
 
     .section h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .section p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     button, .join-button, .vote-button, .donate-button {
         padding: 10px 25px;
         font-size: 1rem;
+        width: 90%; /* Adjust buttons for smaller screens */
     }
 
     #poll-container, .rules-container, .btc-donation {
@@ -230,5 +196,48 @@ footer {
     .reviews-container {
         flex-direction: column;
         gap: 30px;
+    }
+}
+
+/* Responsive Design for Phones */
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 10px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+
+    #poll-container, .rules-container, .btc-donation {
+        padding: 15px;
+        width: 95%;
+    }
+
+    button, .join-button, .vote-button, .donate-button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        width: 100%; /* Full-width buttons */
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8rem;
     }
 }
