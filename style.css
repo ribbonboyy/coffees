@@ -1,209 +1,194 @@
 /* GLOBAL STYLES */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #003b70, #00509e);
-    color: #e6ffff;
+    background: #f4f4f9;
+    color: #2d3142;
     overflow-x: hidden;
 }
 
 header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background-color: #004a80;
-    color: #e6ffff;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(90deg, #0076ff, #00e1ff);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 700;
     margin: 0;
-    color: #00e1ff;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 header h1:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    color: #f4f4f9;
 }
 
-header p {
-    font-size: 1rem;
-    margin: 0;
-    opacity: 0.9;
-}
-
-.nav-links {
+header .nav-links {
     display: flex;
     list-style: none;
-    padding: 0;
     margin: 0;
+    gap: 15px;
 }
 
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
+header .nav-links a {
     text-decoration: none;
     color: #e6ffff;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #00e1ff;
+header .nav-links a:hover {
+    color: white;
 }
 
 /* SECTIONS */
 .section {
-    padding: 40px 10%;
     text-align: center;
-    background: linear-gradient(145deg, #003b70, #00509e);
-    color: #e6ffff;
-    border-radius: 15px;
+    padding: 60px 10%;
     margin: 20px auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .section h2 {
     font-size: 2rem;
-    color: #00e1ff;
+    color: #0076ff;
     margin-bottom: 15px;
-}
-
-/* ABOUT SECTION */
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.join-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    color: #003b70;
-    background: #00e1ff;
-    border: none;
-    border-radius: 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.join-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* REVIEWS SECTION */
 .reviews-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 30px;
     flex-wrap: wrap;
-    padding: 20px;
+    margin-top: 40px;
 }
 
 .review {
-    flex: 1 1 calc(33.333% - 20px);
-    background: linear-gradient(145deg, #004a80, #005cbf);
-    color: #e6ffff;
+    flex: 1 1 calc(33.333% - 30px);
+    background: linear-gradient(135deg, #0076ff, #00e1ff);
+    color: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .review:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .review-text {
     font-size: 1.2rem;
     font-style: italic;
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .review-author {
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 25px;
+    font-size: 1rem;
     font-weight: bold;
-    font-size: 1rem;
-}
-
-/* POLL SECTION */
-#poll-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.poll-options label {
-    display: block;
-    margin: 10px 0;
-    font-size: 1.1rem;
-}
-
-.vote-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #003b70;
-    background: #00e1ff;
+    color: white;
+    background: #0076ff;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.vote-button:hover {
+button:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: #00e1ff;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px 10%;
-    background: #004a80;
-    color: #e6ffff;
-    border-top: 3px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    background: #2d3142;
+    color: white;
     font-size: 0.9rem;
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    header {
+@media (max-width: 1024px) {
+    .reviews-container {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 20px;
     }
 
     .review {
-        flex: 1 1 100%; /* Stack reviews vertically */
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 5%;
+    }
+
+    header .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .section {
-        padding: 30px 5%;
+        padding: 40px 5%;
     }
 
-    .join-button, .vote-button {
-        font-size: 1rem;
-        padding: 10px 15px;
+    button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
     }
+}
 
+@media (max-width: 480px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .review-text {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 8px 12px;
     }
 }
