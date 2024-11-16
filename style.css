@@ -160,3 +160,75 @@ footer {
         width: 90%;
     }
 }
+
+/* Panel styles with hover effects */
+#poll-container {
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    padding: 30px; /* Spacious padding */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Depth effect */
+    transition: all 0.3s ease; /* Smooth animation */
+    max-width: 600px; /* Adjust width */
+    margin: 30px auto; /* Center alignment */
+    text-align: center; /* Center the text */
+}
+
+/* Hover effect for panels */
+#poll-container:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    background: rgba(255, 255, 255, 0.1); /* Lighter background on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
+}
+
+/* Poll question */
+.poll-question {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #61dafb;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 8px rgba(97, 218, 251, 0.8); /* Glowing text */
+}
+
+/* Poll options */
+.poll-options {
+    font-size: 1.2rem;
+    color: #d3d4db;
+    margin-bottom: 20px;
+}
+
+.poll-options label {
+    margin: 0 10px; /* Add spacing between options */
+    color: #fff; /* Brighten options text */
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Vote button */
+.vote-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #0f7cff, #007bff); /* Gradient button */
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.vote-button:hover {
+    background: linear-gradient(90deg, #007bff, #0f7cff); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Bigger shadow on hover */
+}
+
+/* Center alignment and spacing */
+#poll-container h2, #poll-container p {
+    margin: 0 auto;
+    text-align: center;
+}
+
