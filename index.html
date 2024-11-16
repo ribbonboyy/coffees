@@ -3,83 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Coffee Gang Discord community! A hub for coffee lovers to share and enjoy.">
-    <title>Coffee Gang</title>
-    <!-- Google Fonts -->
+    <title>Coffee Gang - Official Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="logo">
             <h1>Coffee Gang</h1>
-            <p>Your coffee community!</p>
+            <p>Where coffee and community meet!</p>
         </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#join">Join Us</a></li>
                 <li><a href="#poll">Poll</a></li>
+                <li><a href="#rules">Rules</a></li>
                 <li><a href="#support">Support</a></li>
-                <li><a href="#disboard">Disboard</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="about" class="section">
-            <h2>About Coffee Gang</h2>
-            <p>Welcome to Coffee Gang, the ultimate Discord community for coffee enthusiasts! Whether you're an espresso aficionado, americano, frape, iced coffee or a latte lover, join us to find people like you! We are a new community and are trying to grow. We would appriciate it ALOT if you could just check us out! :D</p>
-        </section>
-        <section id="join" class="section">
-            <h2>Join the Coffee Gang</h2>
-            <p>Be part of our growing community and explore the world of coffee with like-minded individuals.</p>
-            <a href="https://discord.gg/kj43T3t46A" class="join-button">Join Us on Discord</a>
-        </section>
-        <section id="poll" class="section">
-            <h2>Community Poll</h2>
-            <p>What's your favorite type of coffee?</p>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Coffee Gang</h2>
+        <p>
+            Welcome to <strong>Coffee Gang</strong>, the ultimate Discord community for coffee enthusiasts! Whether you're an espresso aficionado, americano, frappe, iced coffee, or latte lover, join us to find people like you!  
+            <br><br>
+            We are a new community and are trying to grow. We would appreciate it <strong>A LOT</strong> if you could just check us out! :D
+        </p>
+        <a href="https://discord.gg/kj43T3t46A" class="join-button">Join Our Discord</a>
+    </section>
+
+    <!-- Poll Section -->
+    <section id="poll" class="section">
+        <h2>Participate in Our Poll</h2>
+        <div id="poll-container">
             <form id="poll-form">
-                <label>
-                    <input type="radio" name="coffee" value="Espresso"> Espresso
-                </label><br>
-                <label>
-                    <input type="radio" name="coffee" value="Latte"> Latte
-                </label><br>
-                <label>
-                    <input type="radio" name="coffee" value="Cappuccino"> Cappuccino
-                </label><br>
-                <label>
-                    <input type="radio" name="coffee" value="Americano"> Americano
-                </label><br>
-                <button type="submit" class="vote-button">Vote</button>
+                <label for="poll-question" class="poll-question">What's your favorite type of coffee?</label>
+                <div class="poll-options">
+                    <label>
+                        <input type="radio" name="coffee" value="Espresso"> Espresso
+                    </label>
+                    <label>
+                        <input type="radio" name="coffee" value="Latte"> Latte
+                    </label>
+                    <label>
+                        <input type="radio" name="coffee" value="Cappuccino"> Cappuccino
+                    </label>
+                    <label>
+                        <input type="radio" name="coffee" value="Americano"> Americano
+                    </label>
+                </div>
+                <button type="button" class="vote-button">Vote Now</button>
             </form>
-            <p id="poll-result" style="display:none;">Thanks for voting!</p>
-        </section>
-        <section id="disboard" class="section">
-            <div class="bump-disboard">
-    <p>Support our community by bumping us on Disboard!</p>
-    <a href="https://disboard.org/server/1305252835398783068" target="_blank" class="bump-button">Bump Us on Disboard</a>
-</div>
-        </section>
-        <section id="support" class="section">
-            <h2>Support Coffee Gang</h2>
-            <p>If you enjoy being part of the Coffee Gang, consider supporting us with a Bitcoin donation! It can help us buy a new domain or just add funds towards giveaways.</p>
-            <div class="btc-donation">
-                <p><strong>Bitcoin Address:</strong></p>
-                <p class="btc-address">bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</p>
-                <a href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc" class="donate-button">Donate BTC via Bitcoin Core</a>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section">
+        <h2>Community Rules</h2>
+        <div class="rules-container">
+            <button class="expand-rules-button">Show Rules</button>
+            <div class="rules-content">
+                <h3>Naše pravidla</h3>
+                <div class="rule">
+                    <h4>1. Respektuj všechny členy</h4>
+                    <p>Chovej se k ostatním s respektem a slušností. Každý má právo na vlastní názory, identitu a zkušenosti.</p>
+                </div>
+                <div class="rule">
+                    <h4>2. Žádná diskriminace ani nenávist</h4>
+                    <p>Jakákoli forma diskriminace, obtěžování nebo nenávistných projevů je zakázána. Naše komunita je bezpečným místem pro všechny.</p>
+                </div>
+                <!-- Add more rules here -->
+                <p>Více informací a role brzy!</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="section">
+        <h2>Support Us</h2>
+        <div class="btc-donation">
+            <p>Like what we do? Support us with Bitcoin!</p>
+            <p class="btc-address">bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</p>
+            <a class="donate-button" href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc">Donate with Bitcoin</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Coffee Gang. All Rights Reserved.</p>
+        <p>© 2024 Coffee Gang | All rights reserved</p>
     </footer>
-    <script>
-        // Poll submission handling
-        document.getElementById('poll-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form from refreshing the page
-            document.getElementById('poll-result').style.display = 'block'; // Show thank-you message
-        });
-    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
+
