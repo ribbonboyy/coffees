@@ -6,6 +6,7 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #001f3f, #005f8f);
     color: #ffffff;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -23,12 +24,14 @@ a {
     background: linear-gradient(135deg, #003366, #005f8f);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid #00c8ff;
+    animation: slideDown 1s ease-out;
 }
 
 .header .logo h1 {
     font-size: 2rem;
     color: #00c8ff;
     font-weight: 700;
+    animation: fadeIn 2s ease-in;
 }
 
 .header .logo p {
@@ -53,6 +56,7 @@ a {
     background-color: #00c8ff;
     color: #003366;
     border-radius: 5px;
+    transform: scale(1.1);
 }
 
 /* Section Styling */
@@ -61,6 +65,7 @@ a {
     text-align: center;
     background: linear-gradient(135deg, #003366 50%, #005f8f 50%);
     color: #ffffff;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .section:nth-child(even) {
@@ -71,11 +76,13 @@ a {
     font-size: 2rem;
     color: #00c8ff;
     margin-bottom: 20px;
+    animation: bounceIn 1s ease-out;
 }
 
 .section p {
     line-height: 1.6;
     color: #e6f7ff;
+    animation: fadeIn 2s ease-in;
 }
 
 .join-button,
@@ -91,13 +98,14 @@ a {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.5s, background-color 0.3s;
+    animation: pulse 2s infinite;
 }
 
 .join-button:hover,
 .vote-button:hover,
 .donate-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     background-color: #003366;
 }
 
@@ -107,6 +115,7 @@ a {
     margin: 10px 0;
     font-size: 1rem;
     color: #bfefff;
+    animation: fadeInLeft 1.5s ease-out;
 }
 
 .vote-button {
@@ -126,12 +135,14 @@ a {
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     color: #ffffff;
+    animation: zoomIn 1.5s ease-out;
 }
 
 .rules-content {
     display: none;
     text-align: left;
     margin-top: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
 .rules-content .rule h4 {
@@ -146,6 +157,7 @@ a {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    animation: shake 1s infinite;
 }
 
 .expand-rules-button:hover {
@@ -160,6 +172,7 @@ a {
     justify-content: space-around;
     gap: 20px;
     padding: 20px 0;
+    animation: slideUp 1s ease-out;
 }
 
 .review {
@@ -168,17 +181,25 @@ a {
     border-radius: 15px;
     width: 300px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.1);
 }
 
 .review-text {
     font-style: italic;
     color: #e6f7ff;
+    animation: fadeIn 2s ease-in;
 }
 
 .review-author {
     text-align: right;
     font-weight: 600;
     color: #00c8ff;
+    animation: fadeInUp 2s ease-out;
 }
 
 /* Footer */
@@ -188,4 +209,102 @@ footer {
     background: linear-gradient(135deg, #003366, #001f3f);
     color: #bfefff;
     font-size: 0.9rem;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
 }
