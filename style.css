@@ -5,7 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f3ef; /* Subtle coffee-inspired background color */
+    background-color: #f8f3ef; /* Subtle coffee-inspired background */
 }
 
 /* Header styles */
@@ -15,26 +15,28 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background-color: #3e2723; /* Dark coffee brown */
+    background-color: #3e2723; /* Rich coffee brown */
     color: #fff;
 }
 
 .logo h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 0;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .logo p {
     font-size: 1.1rem;
     margin: 0;
     font-weight: 400;
+    font-style: italic;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .nav-links li {
@@ -46,17 +48,18 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    padding: 10px 15px;
-    transition: color 0.3s ease;
-    border-left: 1px solid #795548; /* Separator line between tabs */
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-left: 1px solid #795548;
 }
 
 .nav-links li:first-child a {
-    border-left: none; /* Remove line before the first tab */
+    border-left: none;
 }
 
 .nav-links a:hover {
-    color: #ffccbc; /* Light coffee accent */
+    color: #ffccbc; /* Coffee accent color */
+    background-color: rgba(255, 204, 188, 0.1); /* Subtle hover effect */
 }
 
 /* Section styles */
@@ -66,14 +69,15 @@ body {
 }
 
 .section h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #3e2723;
     margin-bottom: 20px;
     font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .section p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0 auto;
     max-width: 800px;
     color: #5d4037;
@@ -92,7 +96,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .join-button:hover {
@@ -102,9 +106,14 @@ body {
 
 /* Poll styles */
 #poll-form {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 15px;
     text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .vote-button {
@@ -126,20 +135,18 @@ body {
 
 /* Bitcoin donation styles */
 .btc-donation {
-    margin-top: 20px;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 25px;
     background-color: #fff8e1;
     border: 1px solid #d7ccc8;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .btc-donation p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #3e2723;
 }
 
@@ -149,6 +156,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     display: inline-block;
+    font-size: 1rem;
 }
 
 .donate-button {
@@ -161,10 +169,46 @@ body {
     border-radius: 25px;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .donate-button:hover {
+    background-color: #5d4037;
+    transform: translateY(-3px);
+}
+
+/* Bump Disboard styles */
+.bump-disboard {
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff8e1;
+    border: 1px solid #d7ccc8;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.bump-disboard p {
+    font-size: 1.2rem;
+    color: #3e2723;
+    margin-bottom: 15px;
+}
+
+.bump-button {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3e2723;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bump-button:hover {
     background-color: #5d4037;
     transform: translateY(-3px);
 }
@@ -189,7 +233,7 @@ footer {
 
     .nav-links {
         flex-wrap: wrap;
-        gap: 5px;
+        gap: 10px;
     }
 
     .nav-links a {
@@ -202,7 +246,7 @@ footer {
     }
 
     .section h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .section p {
@@ -211,7 +255,7 @@ footer {
 
     #poll-form {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
     }
 
     .vote-button {
@@ -220,7 +264,7 @@ footer {
     }
 
     .btc-donation {
-        padding: 15px;
+        padding: 20px;
     }
 
     .btc-address {
@@ -228,44 +272,9 @@ footer {
         padding: 5px;
     }
 
-    .donate-button {
-        padding: 8px 15px;
+    .donate-button,
+    .bump-button {
+        padding: 10px 20px;
         font-size: 1rem;
     }
 }
-
-.bump-disboard {
-    margin: 30px auto;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff8e1;
-    border: 1px solid #d7ccc8;
-    border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-}
-
-.bump-disboard p {
-    font-size: 1.1rem;
-    color: #3e2723;
-    margin-bottom: 15px;
-}
-
-.bump-button {
-    display: inline-block;
-    padding: 10px 25px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #3e2723;
-    border-radius: 25px;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.bump-button:hover {
-    background-color: #5d4037;
-    transform: translateY(-3px);
-}
-
