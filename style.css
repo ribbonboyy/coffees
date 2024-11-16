@@ -231,4 +231,95 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
+/* Body Background Gradient */
+body {
+    background: linear-gradient(120deg, #0a0f24, #010716);
+    color: #fff;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Gradient and Starry Effect Section */
+#wide-compatibility-section {
+    background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.1), transparent),
+                linear-gradient(180deg, #0a0f24, #010716);
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+#wide-compatibility-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/WpOvHG5.png') repeat; /* Add stars */
+    opacity: 0.2; /* Make stars subtle */
+    pointer-events: none;
+}
+
+/* Section Titles */
+h1, h2 {
+    margin: 0 auto 20px auto;
+    color: #61dafb;
+    text-shadow: 0 0 8px rgba(97, 218, 251, 0.8);
+}
+
+/* Icons Styling */
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.icon-grid a {
+    display: inline-block;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.icon-grid a:hover {
+    transform: scale(1.2); /* Slightly larger on hover */
+    background: linear-gradient(135deg, #61dafb, #007bff);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.icon-grid img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* White icon effect */
+}
+
+/* Reviews Section */
+#reviews-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #010716, #0a0f24);
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#reviews-section h2 {
+    font-size: 2.5rem;
+    color: #61dafb;
+    text-shadow: 0px 0px 12px rgba(97, 218, 251, 1);
+}
+
+/* Fluid Transitions for Buttons and Links */
+button, a {
+    transition: all 0.3s ease-in-out;
+}
 
