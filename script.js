@@ -10,6 +10,13 @@ document.querySelector('.expand-rules-button').addEventListener('click', functio
     }
 });
 
+const pollForm = document.querySelector("#poll-container form");
+pollForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you for voting!");
+});
+
+
 <script>
     // Number of stars to display
     const numStars = 10; // Adjust to change how many stars appear
