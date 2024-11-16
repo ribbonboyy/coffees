@@ -233,3 +233,39 @@ footer {
         font-size: 1rem;
     }
 }
+
+.bump-disboard {
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff8e1;
+    border: 1px solid #d7ccc8;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.bump-disboard p {
+    font-size: 1.1rem;
+    color: #3e2723;
+    margin-bottom: 15px;
+}
+
+.bump-button {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3e2723;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.bump-button:hover {
+    background-color: #5d4037;
+    transform: translateY(-3px);
+}
+
