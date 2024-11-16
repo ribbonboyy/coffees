@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: radial-gradient(circle, #003366 0%, #001d33 100%); /* Dark blue gradient */
+    background: radial-gradient(circle, #003366 0%, #001d33 100%);
     color: #f5f5f5;
     overflow-x: hidden;
 }
@@ -16,7 +16,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 10%;
-    background: #0d233d; /* Dark blue */
+    background: #0d233d;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -24,7 +24,7 @@ body {
 .logo h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #00bcd4; /* Cyan */
+    color: #00bcd4;
     text-shadow: 0 3px 10px rgba(0, 188, 212, 0.5);
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #00bcd4; /* Cyan */
+    color: #00bcd4;
     background: rgba(0, 188, 212, 0.1);
 }
 
@@ -66,17 +66,32 @@ body {
     max-width: 1200px;
     color: #f5f5f5;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .section:hover {
-    transform: translateY(-5px); /* Section animation on hover */
+    transform: translateY(-5px);
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00bcd4, #00796b);
+    background-size: 400% 400%;
+    animation: beamAnimation 3s infinite linear;
+    z-index: -1;
 }
 
 .section h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #00bcd4; /* Cyan */
+    color: #00bcd4;
     text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.5);
 }
 
@@ -93,7 +108,7 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(90deg, #00bcd4, #00796b); /* Cyan to Dark Cyan */
+    background: linear-gradient(90deg, #00bcd4, #00796b);
     border: none;
     border-radius: 50px;
     text-decoration: none;
@@ -117,6 +132,21 @@ body {
     text-align: center;
     color: #f5f5f5;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+#poll-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00bcd4, #00796b);
+    background-size: 400% 400%;
+    animation: beamAnimation 3s infinite linear;
+    z-index: -1;
 }
 
 .vote-button {
@@ -142,11 +172,25 @@ body {
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 20px;
-    transition: transform 0.3s ease;
+    position: relative;
 }
 
 .rules-container:hover {
-    transform: translateY(-5px); /* Animating the panel */
+    transform: translateY(-5px);
+}
+
+.rules-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00bcd4, #00796b);
+    background-size: 400% 400%;
+    animation: beamAnimation 3s infinite linear;
+    z-index: -1;
 }
 
 .rules-content {
@@ -157,7 +201,7 @@ body {
 
 .rules-content h4 {
     margin-bottom: 10px;
-    color: #00bcd4; /* Cyan */
+    color: #00bcd4;
 }
 
 .expand-rules-button {
@@ -195,7 +239,7 @@ body {
 }
 
 .review:hover {
-    transform: translateY(-5px); /* Hover animation */
+    transform: translateY(-5px);
 }
 
 .review-text {
@@ -207,7 +251,7 @@ body {
 
 .review-author {
     font-weight: 600;
-    color: #00bcd4; /* Cyan */
+    color: #00bcd4;
 }
 
 /* BTC Donation Section */
@@ -236,9 +280,19 @@ body {
 
 /* Footer */
 footer {
-    background: #0d233d; /* Dark Blue */
+    background: #0d233d;
     padding: 20px;
     text-align: center;
     font-size: 0.9rem;
     color: #d3d4db;
+}
+
+/* Animation for the moving cyan beam */
+@keyframes beamAnimation {
+    0% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 400%;
+    }
 }
