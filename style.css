@@ -111,11 +111,11 @@ button, .join-button, .donate-button, .vote-button, .expand-rules-button {
     cursor: pointer;
     text-decoration: none;
     margin: 10px auto;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease; /* Smooth color transition */
 }
 
 button:hover, .join-button:hover, .donate-button:hover, .vote-button:hover, .expand-rules-button:hover {
-    background-color: #008ba3;
+    background-color: #008ba3; /* Darker shade on hover */
 }
 
 /* Responsive Adjustments */
