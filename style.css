@@ -1,4 +1,4 @@
-/* General styles */
+/* CSS Styles */
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Header styles */
+/* Header Styles */
 .header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ body {
     color: #61dafb;
     text-shadow: 0 3px 10px rgba(97, 218, 251, 0.5);
     text-align: center;
-    width: 100%; /* Ensures the logo stays on its own row on smaller screens */
+    width: 100%;
 }
 
 .nav-links {
@@ -53,7 +53,7 @@ body {
     background: rgba(97, 218, 251, 0.1);
 }
 
-/* Hero section */
+/* Section (Hero Section) */
 .section {
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 0px 0px 10px rgba(97, 218, 251, 0.7);
+    text-shadow: 0 0 10px rgba(97, 218, 251, 0.7);
 }
 
 .section p {
@@ -94,7 +94,7 @@ button, .join-button, .vote-button, .donate-button {
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
-    width: 80%; /* Default button size adjustment for smaller screens */
+    width: 80%;
 }
 
 button:hover, .join-button:hover, .vote-button:hover, .donate-button:hover {
@@ -103,13 +103,13 @@ button:hover, .join-button:hover, .vote-button:hover, .donate-button:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Panels with hover effect */
+/* Panels with Hover Effect */
 #poll-container, .rules-container, .btc-donation {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     max-width: 600px;
     margin: 30px auto;
     text-align: center;
@@ -185,7 +185,7 @@ footer {
     button, .join-button, .vote-button, .donate-button {
         padding: 10px 25px;
         font-size: 1rem;
-        width: 90%; /* Adjust buttons for smaller screens */
+        width: 90%;
     }
 
     #poll-container, .rules-container, .btc-donation {
@@ -233,7 +233,7 @@ footer {
     button, .join-button, .vote-button, .donate-button {
         padding: 12px 20px;
         font-size: 0.9rem;
-        width: 100%; /* Full-width buttons */
+        width: 100%;
     }
 
     footer {
