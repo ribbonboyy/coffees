@@ -13,83 +13,148 @@ body {
 /* Header */
 .header {
     display: flex;
-    justify-content: center; /* Center items */
+    flex-direction: column;
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px;
     background: #0d233d;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.logo h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin: 0;
+}
+
+.logo p {
+    font-size: 1rem;
+    color: #d3d4db;
+    margin-top: 5px;
+}
+
 .nav-links {
-    list-style: none;
     display: flex;
-    justify-content: center; /* Center links */
-    gap: 15px;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+.nav-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(0, 188, 212, 0.1);
 }
 
 /* Section Styling */
 .section {
-    padding: 40px 8%;
-    margin: 0 auto; /* Center section content */
+    padding: 40px 5%;
     max-width: 1200px;
+    margin: 30px auto;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
-    text-align: center;
 }
 
-/* Cyan beam effect (disabled for mobile) */
-.section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 15px;
-    background: linear-gradient(45deg, #00bcd4, #00796b);
-    background-size: 400% 400%;
-    animation: beamAnimation 3s infinite linear;
-    z-index: -1;
+/* Section Title */
+.section h2 {
+    font-size: 2.2rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.5);
 }
 
-/* Animation for cyan beam */
-@keyframes beamAnimation {
-    0% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 400%;
-    }
+/* Text Styling */
+.section p {
+    font-size: 1.1rem;
+    color: #d3d4db;
+    line-height: 1.8;
 }
 
-/* Centered Button Styles */
-.join-button, .donate-button, .vote-button, .expand-rules-button {
+/* Rules Content */
+.rules-content {
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.rule {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.rule h4 {
+    color: #00bcd4;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.rule p {
+    font-size: 1rem;
+    color: #d3d4db;
+}
+
+/* Button Styles */
+button, .join-button, .donate-button, .vote-button, .expand-rules-button {
     display: inline-block;
     padding: 12px 25px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #f5f5f5;
     background-color: #00bcd4;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px auto;
     text-align: center;
-    text-decoration: none;
     transition: background 0.3s ease;
 }
 
-.join-button:hover, .donate-button:hover, .vote-button:hover, .expand-rules-button:hover {
+button:hover, .join-button:hover, .donate-button:hover, .vote-button:hover, .expand-rules-button:hover {
     background-color: #008ba3;
 }
 
-/* Disable cyan animation and adjust padding for smaller screens */
+.expand-rules-button {
+    margin: 10px auto;
+}
+
+/* Cyan Beam Effect (Desktop Only) */
+@media (min-width: 769px) {
+    .section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        background: linear-gradient(45deg, #00bcd4, #00796b);
+        background-size: 400% 400%;
+        animation: beamAnimation 5s infinite linear;
+        z-index: -1;
+    }
+
+    @keyframes beamAnimation {
+        0% { background-position: 400% 0; }
+        100% { background-position: 0 400%; }
+    }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .header {
-        padding: 20px 5%;
+        padding: 15px;
     }
 
     .nav-links {
@@ -99,44 +164,27 @@ body {
 
     .section {
         padding: 30px 5%;
+        box-shadow: none; /* Reduce shadow on mobile for simplicity */
     }
 
     .section::before {
-        background: none; /* Disable cyan animation */
-    }
-}
-
-/* Adjustments for very small screens */
-@media (max-width: 480px) {
-    .header, .nav-links, .section {
-        padding: 10px 3%;
+        display: none; /* Disable cyan beam effect on mobile */
     }
 
-    .section::before {
-        background: none; /* Ensure cyan animation is off */
+    .section h2 {
+        font-size: 1.8rem;
     }
-}
 
-/* General Button Styles */
-.join-button, .donate-button, .vote-button, .expand-rules-button {
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #f5f5f5;
-    background-color: #00bcd4;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
+    .section p {
+        font-size: 1rem;
+    }
 
-.join-button:hover, .donate-button:hover, .vote-button:hover, .expand-rules-button:hover {
-    background-color: #008ba3;
-}
+    .logo h1 {
+        font-size: 2rem;
+    }
 
-.rules-content {
-    display: none; /* Initially hidden until 'Show Rules' button is clicked */
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
 }
