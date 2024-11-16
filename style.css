@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: radial-gradient(circle, #003366 0%, #001d33 100%);
+    background: radial-gradient(circle, #001d33 0%, #003366 100%);
     color: #f5f5f5;
     overflow-x: hidden;
 }
@@ -68,6 +68,7 @@ body {
     position: relative;
 }
 
+/* Cyan animated beam effect around the panels */
 .section::before {
     content: "";
     position: absolute;
@@ -80,6 +81,16 @@ body {
     background-size: 400% 400%;
     animation: beamAnimation 3s infinite linear;
     z-index: -1;
+}
+
+/* Animation for moving cyan beam */
+@keyframes beamAnimation {
+    0% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 400%;
+    }
 }
 
 .section:hover {
@@ -144,7 +155,7 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .header {
-        padding: 20px;
+        padding: 20px 5%;
     }
 
     .nav-links {
@@ -192,15 +203,5 @@ body {
     .join-button {
         padding: 12px 30px;
         font-size: 1rem;
-    }
-}
-
-/* Animation for the moving cyan beam */
-@keyframes beamAnimation {
-    0% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 400%;
     }
 }
