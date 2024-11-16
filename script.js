@@ -19,7 +19,7 @@ pollForm.addEventListener("submit", function (e) {
 
 <script>
     // Number of stars to display
-    const numStars = 10; // Adjust to change how many stars appear
+    const numStars = 10; // Adjust this value to control the number of stars
 
     // Get the body element
     const body = document.querySelector("body");
@@ -37,3 +37,4 @@ pollForm.addEventListener("submit", function (e) {
         body.appendChild(star);
     }
 </script>
+
