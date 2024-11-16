@@ -103,47 +103,24 @@ button:hover, .join-button:hover, .vote-button:hover, .donate-button:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Poll container */
-#poll-container {
+/* Panels with hover effect */
+#poll-container, .rules-container, .btc-donation {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 40px; /* Slightly increased padding */
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 700px; /* Increased width */
+    max-width: 600px;
     margin: 30px auto;
     text-align: center;
     transition: all 0.3s ease;
     transform: scale(1);
 }
 
-#poll-container:hover {
+#poll-container:hover, .rules-container:hover, .btc-donation:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
     background: rgba(255, 255, 255, 0.08);
-}
-
-.star {
-    position: absolute;
-    width: 40px; /* Adjust size as needed */
-    height: 40px;
-    background-image: url('starstarstar.png'); /* Ensure this is the correct path */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 10; /* Keep the stars above most elements */
-}
-
-}
-
-/* Animation for stars */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
 }
 
 /* Footer */
@@ -161,8 +138,106 @@ footer {
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* JavaScript-generated star positioning */
-.star-wrapper {
-    position: relative;
-    overflow: hidden;
+/* Reviews Section */
+#reviews {
+    background: linear-gradient(180deg, #010716, #0a0f24);
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.review {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design for Tablets */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 50px 5%;
+    }
+
+    .section h2 {
+        font-size: 2.5rem;
+    }
+
+    .section p {
+        font-size: 1.2rem;
+    }
+
+    button, .join-button, .vote-button, .donate-button {
+        padding: 10px 25px;
+        font-size: 1rem;
+        width: 90%; /* Adjust buttons for smaller screens */
+    }
+
+    #poll-container, .rules-container, .btc-donation {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .reviews-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Responsive Design for Phones */
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 10px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+
+    #poll-container, .rules-container, .btc-donation {
+        padding: 15px;
+        width: 95%;
+    }
+
+    button, .join-button, .vote-button, .donate-button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        width: 100%; /* Full-width buttons */
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
 }
