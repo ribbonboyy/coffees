@@ -1,226 +1,159 @@
-/* General Styles */
-body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: radial-gradient(circle, #0b1221 0%, #000814 100%);
-    color: #f5f5f5;
-    overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Gang - Stránka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Coffee Gang</h1>
+            <p>Kde se kafe a komunita pot-káva-jí</p>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#poll">Poll</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 10%;
-    background: #121a2b;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Coffee Gang</h2>
+        <p>
+            VÍtej v <strong>Coffee Gang</strong>, nejlepší Discord komunita pro kávové nadšence! Ať už jsi milovník espressa, americano, frappé, ledové kávy nebo latte, připoj se komunitu, která je prostě v klidu!  
+            <br><br>
+            Jsme nová komunita takže by jsme si <strong>HODNĚ</strong> vážili, pokud by jsi se připojil :D
+        </p>
+        <a href="https://discord.gg/kj43T3t46A" class="join-button">Náš Discord</a>
+    </section>
 
-.logo h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffba08;
-    text-shadow: 0 3px 10px rgba(255, 186, 8, 0.5);
-}
+    <!-- Poll Section -->
+    <section id="poll" class="section">
+        <h2>Náš průzkum!</h2>
+        <div id="poll-container">
+            <form id="poll-form">
+                <label for="poll-question" class="poll-question">Co je tvé oblíbené kafe??</label>
+                <div class="poll-options">
+                    <label>
+                        <input type="radio" name="coffee" value="Espresso"> Espresso
+                    </label>
+                    <label>
+                        <input type="radio" name="coffee" value="Latte"> Latte
+                    </label>
+                    <label>
+                        <input type="radio" name="coffee" value="Cappuccino"> Cappuccino
+                    </label>
+                    <label>
+                        <input type="radio" name="coffee" value="Americano"> Americano
+                    </label>
+                </div>
+                <button type="button" class="vote-button">Hlasovat</button>
+            </form>
+        </div>
+    </section>
 
-.logo p {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #d3d4db;
-    margin-top: 5px;
-}
+    <!-- Rules Section -->
+   <section id="rules" class="section">
+    <h2>Pravidla komunity</h2>
+    <div class="rules-container">
+        <button class="expand-rules-button">Show Rules</button>
+        <div class="rules-content">
+            <h3>Naše pravidla</h3>
+            <div class="rule">
+                <h4>1. Respektuj všechny členy</h4>
+                <p>Chovej se k ostatním s respektem a slušností. Každý má právo na vlastní názory, identitu a zkušenosti.</p>
+            </div>
+            <div class="rule">
+                <h4>2. Žádná diskriminace ani nenávist</h4>
+                <p>Jakákoli forma diskriminace, obtěžování nebo nenávistných projevů je zakázána. Naše komunita je bezpečným místem pro všechny.</p>
+            </div>
+            <div class="rule">
+                <h4>3. Žádné spamování</h4>
+                <p>Spamování je zakázáno. Nezveřejňuj nevyžádané odkazy, reklamy nebo žádosti o peníze.</p>
+            </div>
+            <div class="rule">
+                <h4>4. Slušnost v diskuzích</h4>
+                <p>V diskuzích se chovejte slušně a konstruktivně. Při nesouhlasu vyjadřujte svůj názor civilizovaně a s respektem k ostatním.</p>
+            </div>
+            <div class="rule">
+                <h4>5. Ochrana osobních údajů</h4>
+                <p>Nezveřejňujte osobní údaje jiné osoby bez jejího souhlasu. Ochrana soukromí je naší prioritou.</p>
+            </div>
+            <div class="rule">
+                <h4>6. Nepoužívejte nevhodný obsah</h4>
+                <p>Veškerý obsah, který je vulgární, urážlivý nebo porušuje zákony, je přísně zakázán.</p>
+            </div>
+            <div class="rule">
+                <h4>7. Dodržujte místní zákony</h4>
+                <p>Každý člen je odpovědný za dodržování zákonů svého regionu a respektování právních předpisů.</p>
+            </div>
+            <div class="rule">
+                <h4>8. Buďte aktivní a zapojujte se</h4>
+                <p>Komunita roste díky aktivním a zapojeným členům. Snažte se přispět do diskuzí a aktivit, které zde pořádáme.</p>
+            </div>
+            <div class="rule">
+                <h4>9. Bez reklamy a marketingu</h4>
+                <p>Žádné reklamy, marketing nebo komerční nabídky bez předchozího souhlasu správců komunity.</p>
+            </div>
+            <div class="rule">
+                <h4>10. Dodržujte pravidla Discordu</h4>
+                <p>Veškeré chování v našem serveru musí být v souladu s oficiálními pravidly Discordu.</p>
+            </div>
+                <!-- Add more rules here -->
+                <p>Více informací a role brzy!</p>
+            </div>
+        </div>
+    </section>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
 
-.nav-links a {
-    color: #f5f5f5;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
 
-.nav-links a:hover {
-    color: #ffba08;
-    background: rgba(255, 186, 8, 0.1);
-}
+    <!-- Reviews Section -->
+<section id="reviews" class="section">
+    <h2>Reviews našeho serveru!</h2>
+    <div class="reviews-container">
+        <!-- Review Item 1 -->
+        <div class="review">
+            <p class="review-text">"sigma ohio server připoj se jinak nejsi skibidi"</p>
+            <p class="review-author">- nicopiko, moderátor</p>
+        </div>
+        <!-- Review Item 2 -->
+        <div class="review">
+            <p class="review-text">"Ti kteří ví: 💀💀"</p>
+            <p class="review-author">- Kuba, moderátor</p>
+        </div>
+        <!-- Review Item 3 -->
+        <div class="review">
+            <p class="review-text">"Pálí Ohřát Kafe Piju Pořád 11/10"</p>
+            <p class="review-author">- stepyn, člen</p>
+        </div>
+    </div>
+</section>
 
-/* Section Styling */
-.section {
-    padding: 60px 10%;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 30px auto;
-    max-width: 1200px;
-    color: #f5f5f5;
-}
+    <!-- Support Section -->
+    <section id="support" class="section">
+        <h2>Support Us</h2>
+        <div class="btc-donation">
+            <p>Líbí se ti co děláme? Podpoř nás!</p>
+            <p class="btc-address">bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</p>
+            <a class="donate-button" href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc">Otevřít BTC core</a>
+        </div>
+    </section>
 
-.section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #ffba08;
-    text-shadow: 0px 0px 10px rgba(255, 186, 8, 0.5);
-}
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Coffee Gang | Vše práva rezervována</p>
+    </footer>
 
-.section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #d3d4db;
-}
-
-/* Join Button */
-.join-button {
-    display: inline-block;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    background: linear-gradient(90deg, #ff8c00, #ffba08);
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.join-button:hover {
-    background: linear-gradient(90deg, #ffba08, #ff8c00);
-    transform: translateY(-5px);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Poll Container */
-#poll-container {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 30px auto;
-    text-align: center;
-    color: #f5f5f5;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.vote-button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    background: #ffba08;
-    color: #000814;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.vote-button:hover {
-    background: #ff8c00;
-}
-
-/* Rules Container */
-.rules-container {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.rules-content {
-    display: none;
-    margin-top: 20px;
-    text-align: left;
-}
-
-.rules-content h4 {
-    margin-bottom: 10px;
-    color: #ffba08;
-}
-
-.expand-rules-button {
-    padding: 10px 25px;
-    background: #ffba08;
-    color: #000814;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.expand-rules-button:hover {
-    background: #ff8c00;
-}
-
-/* Reviews */
-.reviews-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.review {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.review-text {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 10px;
-    color: #d3d4db;
-}
-
-.review-author {
-    font-weight: 600;
-    color: #ffba08;
-}
-
-/* BTC Donation Section */
-.btc-donation {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.donate-button {
-    display: inline-block;
-    padding: 10px 25px;
-    background: #ffba08;
-    color: #000814;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.donate-button:hover {
-    background: #ff8c00;
-}
-
-/* Footer */
-footer {
-    background: #121a2b;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #d3d4db;
-}
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
