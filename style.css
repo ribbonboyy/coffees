@@ -1,4 +1,4 @@
-/* Global Styles */
+/* General Styles */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -6,111 +6,39 @@ body {
   background: #f0f9ff;
   color: #333;
   overflow-x: hidden;
-  line-height: 1.6;
-}
-
-h1, h2, p {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Header */
-header {
-  background: linear-gradient(90deg, #0076ff, #00e1ff);
-  color: white;
-  padding: 15px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background 0.5s ease, padding 0.3s ease;
-}
-
-header:hover {
-  background: linear-gradient(90deg, #0056cc, #00c4cc);
-}
-
-.site-title {
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  font-size: clamp(0.9rem, 1vw, 1.1rem);
-  font-weight: 500;
-  padding: 10px 15px;
-  color: white;
-  border-radius: 5px;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-/* Section Styling */
-.section {
-  padding: clamp(40px, 10vw, 80px);
-  background: white;
-  border-radius: 12px;
-  margin: 5vw auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-  overflow: hidden;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-.section h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-  margin-bottom: 20px;
-  color: #0076ff;
-}
-
-.section p {
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-  margin-bottom: 20px;
-  color: #555;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Reviews Section */
+.reviews-section {
+  padding: 60px 5%;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  margin: 40px 5%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviews-section h2 {
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  margin-bottom: 40px;
+  color: #0076ff;
+  font-weight: 700;
+}
+
+/* Reviews Container */
 .reviews-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  justify-items: center;
 }
 
 .review {
   background: linear-gradient(135deg, #0076ff, #00e1ff);
   color: white;
-  padding: 20px;
+  padding: 20px 15px;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -118,14 +46,33 @@ header:hover {
 }
 
 .review:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
+.review p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.review span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Buttons Group */
+.button-group {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
 button {
   padding: 12px 25px;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-size: 1rem;
   font-weight: bold;
   color: white;
   background: #0076ff;
@@ -136,64 +83,33 @@ button {
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   background: #00c4cc;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #2d3142;
-  color: white;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+/* Invite Button Specific */
+.invite-btn {
+  background: linear-gradient(90deg, #0076ff, #00e1ff);
+}
+
+.invite-btn:hover {
+  background: linear-gradient(90deg, #0056cc, #00c4cc);
+}
+
+/* BTC Core Button Specific */
+.btc-core-btn {
+  background: linear-gradient(90deg, #f7931a, #ff9900);
+}
+
+.btc-core-btn:hover {
+  background: linear-gradient(90deg, #cc7a16, #e68900);
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
-  header {
-    padding: 10px 5%;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
 @media (max-width: 768px) {
-  header {
+  .button-group {
     flex-direction: column;
     gap: 15px;
-  }
-
-  .nav-links a {
-    font-size: 0.9rem;
-  }
-
-  .section {
-    padding: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .site-title {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-  .section {
-    margin: 10vw 5vw;
-    padding: 30px;
   }
 }
