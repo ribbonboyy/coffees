@@ -1,32 +1,34 @@
-/* General Styles */
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body, html {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(120deg, #00faff, #001f3f);
-    overflow: hidden;
-    height: 100vh;
+    height: 100%;
     color: white;
+    overflow-x: hidden;
 }
 
 /* Animated Background */
-.background {
+body::before {
+    content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
     background: radial-gradient(circle, #00faff, #001f3f);
     background-size: 200%;
-    animation: gradientAnimation 6s infinite alternate;
-    z-index: -1;
+    animation: bgAnimation 8s infinite alternate;
 }
 
-/* Gradient Animation */
-@keyframes gradientAnimation {
+/* Background Animation */
+@keyframes bgAnimation {
     from {
         background-position: 0% 0%;
     }
@@ -35,43 +37,117 @@ body, html {
     }
 }
 
-/* Panel Styling */
-.panel {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Header Styling */
+.header {
     text-align: center;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    perspective: 1000px;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    backdrop-filter: blur(15px);
+    transition: transform 0.5s ease;
 }
 
-/* Title Section */
-.title {
-    font-size: 4rem;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+.header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    color: #00faff;
 }
-.subtitle {
-    font-size: 1.5rem;
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
     margin-top: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #00faff;
+    color: #001f3f;
+}
+
+/* Sections Styling */
+.section {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: #00faff;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.section p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Glassmorphism Panels */
 .glass {
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
     padding: 2rem;
-    max-width: 80%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Hover Effects */
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+.join-button, .vote-button, .expand-rules-button, .donate-button {
+    display: inline-block;
+    background: #00faff;
+    color: #001f3f;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.join-button:hover, .vote-button:hover, .expand-rules-button:hover, .donate-button:hover {
+    background: white;
+    color: #00faff;
 }
 
 /* Footer */
 footer {
-    font-size: 1rem;
-    background: rgba(0, 31, 63, 0.8);
-    padding: 1rem 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 31, 63, 0.9);
+    color: #00faff;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
 }
