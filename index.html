@@ -18,7 +18,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background-image: url('starstarstar.png');
+            background-image: url('https://via.placeholder.com/20'); /* Replace with actual path */
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 0.8;
@@ -70,71 +70,41 @@
         </a>
     </section>
 
-    <!-- Poll Section -->
-    <section id="poll" class="text-center py-16 px-6 md:px-10 bg-blue-900">
-        <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">Náš průzkum!</h2>
-        <form id="poll-form" class="max-w-sm md:max-w-xl mx-auto">
-            <label for="poll-question" class="block text-cyan-200 font-medium mb-4">
-                Co je tvé oblíbené kafe?
-            </label>
-            <div class="flex flex-col space-y-3 mb-6">
-                <label class="text-cyan-50"><input type="radio" name="coffee" value="Espresso" class="mr-2"> Espresso</label>
-                <label class="text-cyan-50"><input type="radio" name="coffee" value="Latte" class="mr-2"> Latte</label>
-                <label class="text-cyan-50"><input type="radio" name="coffee" value="Cappuccino" class="mr-2"> Cappuccino</label>
-                <label class="text-cyan-50"><input type="radio" name="coffee" value="Americano" class="mr-2"> Americano</label>
+    <!-- Support Section -->
+    <section id="support" class="text-center py-16 px-6 md:px-10 bg-blue-900">
+        <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">Podpora a BTC</h2>
+        <p class="text-cyan-200 max-w-xl mx-auto mb-6">
+            Pokud nás chceš podpořit, zde je náš BTC wallet: <br>
+            <span class="font-bold text-cyan-400">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</span>
+        </p>
+        <p class="text-cyan-200">Děkujeme za podporu! 💖</p>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="text-center py-16 px-6 md:px-10 bg-blue-900">
+        <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">Reviews našeho serveru!</h2>
+        <div class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
+                <p class="text-cyan-200">"Sigma Ohio server připoj se jinak nejsi skibidi"</p>
+                <p class="text-cyan-300 mt-2">- Nicopiko, moderátor</p>
+                <p>⭐⭐⭐⭐⭐</p>
             </div>
-            <button type="button" class="px-6 py-2 bg-cyan-400 text-blue-950 font-bold rounded-full shadow-md hover:bg-cyan-300 transition-all transform hover:scale-105 duration-300 ease-in-out">
-                Hlasovat
-            </button>
-        </form>
+            <div class="p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
+                <p class="text-cyan-200">"Ti kteří ví: 💀💀"</p>
+                <p class="text-cyan-300 mt-2">- Kuba, moderátor</p>
+                <p>⭐⭐⭐⭐</p>
+            </div>
+            <div class="p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
+                <p class="text-cyan-200">"Pálí Ohřát Kafe Piju Pořád 11/10"</p>
+                <p class="text-cyan-300 mt-2">- Stepyn, člen</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
     </section>
-
-    <!-- Rules Section -->
-    <section id="rules" class="text-center py-16 px-6 md:px-10 bg-blue-950 bg-opacity-90">
-        <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">Pravidla serveru</h2>
-        <ul class="list-disc list-inside max-w-xl mx-auto text-cyan-200 leading-relaxed text-left">
-            <li>Nebuď toxic. 🚫</li>
-            <li>Respektuj moderátory.</li>
-            <li>Pokud si nejsi jistý, přečti si pravidla znovu.</li>
-            <li>Buď v pohodě a chilluj s kávou! ☕</li>
-        </ul>
-    </section>
-
-<!-- Support Section -->
-<section id="support" class="text-center py-16 px-6 md:px-10 bg-blue-900">
-    <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">Podpora a BTC</h2>
-    <p class="text-cyan-200 max-w-xl mx-auto mb-6">
-        Pokud nás chceš podpořit, zde je náš BTC wallet: <br>
-        <span class="font-bold text-cyan-400">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</span>
-    </p>
-    <p class="text-cyan-200">Děkujeme za podporu! 💖</p>
-</section>
-
-<!-- Reviews Section -->
-<section id="reviews" class="text-center py-16 px-6 md:px-10 bg-blue-900">
-    <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">Reviews našeho serveru!</h2>
-    <div class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="review p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
-            <p class="review-text text-cyan-200">"Sigma Ohio server připoj se jinak nejsi skibidi"</p>
-            <p class="review-author text-cyan-300 mt-2">- Nicopiko, moderátor</p>
-            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
-        </div>
-        <div class="review p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
-            <p class="review-text text-cyan-200">"Ti kteří ví: 💀💀"</p>
-            <p class="review-author text-cyan-300 mt-2">- Kuba, moderátor</p>
-            <p class="stars">⭐️⭐️⭐️⭐️</p>
-        </div>
-        <div class="review p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
-            <p class="review-text text-cyan-200">"Pálí Ohřát Kafe Piju Pořád 11/10"</p>
-            <p class="review-author text-cyan-300 mt-2">- Stepyn, člen</p>
-            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
-        </div>
-    </div>
-</section>
 
     <!-- Random Stars -->
     <script>
-        const starCount = 50; // Number of stars
+        const starCount = 50;
         const body = document.body;
 
         for (let i = 0; i < starCount; i++) {
