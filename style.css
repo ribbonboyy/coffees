@@ -5,6 +5,7 @@ body {
   padding: 0;
   background: #f0f9ff;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1, h2, p {
@@ -16,7 +17,7 @@ h1, h2, p {
 header {
   background: linear-gradient(90deg, #0076ff, #00e1ff);
   color: white;
-  padding: 20px 10%;
+  padding: 15px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +25,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background 0.5s ease;
+  transition: background 0.5s ease, padding 0.3s ease;
 }
 
 header:hover {
@@ -32,7 +33,7 @@ header:hover {
 }
 
 .site-title {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: bold;
   cursor: pointer;
   animation: float 3s infinite ease-in-out;
@@ -43,10 +44,16 @@ header:hover {
   50% { transform: translateY(-10px); }
 }
 
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
 .nav-links a {
   text-decoration: none;
   color: white;
-  margin: 0 15px;
   font-size: 1rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -58,14 +65,15 @@ header:hover {
 
 /* Section Styling */
 .section {
-  padding: 80px 10%;
+  padding: 5vw;
   background: white;
   border-radius: 12px;
-  margin: 40px 5%;
+  margin: 5vw auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
   animation: fadeIn 1.5s ease-in-out;
+  max-width: 1200px;
 }
 
 .section:hover {
@@ -82,12 +90,12 @@ header:hover {
 .reviews-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
 }
 
 .review {
-  flex: 1 1 calc(33.333% - 30px);
+  flex: 1 1 calc(33.333% - 20px);
   background: linear-gradient(135deg, #0076ff, #00e1ff);
   color: white;
   padding: 20px;
@@ -105,7 +113,7 @@ header:hover {
 /* Contact Button */
 button {
   padding: 15px 30px;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   font-weight: bold;
   color: white;
   background: #0076ff;
@@ -127,21 +135,63 @@ footer {
   padding: 20px;
   background: #2d3142;
   color: white;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+  .review {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  header {
+    padding: 10px 5%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .review {
     flex: 1 1 100%;
   }
 
   header {
-    flex-direction: column;
     text-align: center;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section {
+    padding: 8vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.5rem;
   }
 
   .nav-links a {
-    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 12px 25px;
+  }
+
+  .section {
+    padding: 10vw;
+    margin: 8vw 2vw;
   }
 }
