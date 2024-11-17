@@ -10,11 +10,25 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stars {
-            color: #fbbf24; /* Amber color for stars */
-            margin-top: 0.5rem;
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('starstarstar.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .star:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            transition: transform 0.2s, opacity 0.2s;
         }
     </style>
 </head>
@@ -118,6 +132,20 @@
         </div>
     </section>
 
+    <!-- Random Stars -->
+    <script>
+        const starCount = 50; // Number of stars
+        const body = document.body;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animation = `fadeIn ${Math.random() * 5 + 2}s infinite ease-in-out alternate`;
+            body.appendChild(star);
+        }
+    </script>
 </body>
 
 </html>
