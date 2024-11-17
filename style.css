@@ -11,6 +11,7 @@ body, html {
     height: 100%;
     color: white;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Animated Background */
@@ -109,13 +110,38 @@ body::before {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Glassmorphism Panels */
-.glass {
+/* Reviews Section */
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.review {
     background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.review-text {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-author {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Hover Effects */
@@ -141,6 +167,17 @@ body::before {
 .join-button:hover, .vote-button:hover, .expand-rules-button:hover, .donate-button:hover {
     background: white;
     color: #00faff;
+}
+
+/* Poll Section */
+.poll-options {
+    margin: 1rem 0;
+}
+
+.poll-options label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1rem;
 }
 
 /* Footer */
