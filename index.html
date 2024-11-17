@@ -130,21 +130,3 @@
             </div>
         </div>
     </section>
-
-    <!-- Random Stars -->
-    <script>
-        const starCount = 50;
-        const body = document.body;
-
-        for (let i = 0; i < starCount; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.top = `${Math.random() * 100}vh`;
-            star.style.left = `${Math.random() * 100}vw`;
-            star.style.animation = `fadeIn ${Math.random() * 5 + 2}s infinite ease-in-out alternate`;
-            body.appendChild(star);
-        }
-    </script>
-</body>
-
-</html>
