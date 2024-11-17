@@ -4,72 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Gang - Stránka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gradient-to-b from-blue-900 to-blue-800 text-cyan-50">
+
     <!-- Header -->
-    <header class="header">
-        <div class="logo">
-            <h1>Coffee Gang</h1>
-            <p>Kde se kafe a komunita pot-káva-jí!</p>
+    <header class="flex justify-between items-center px-10 py-4 bg-blue-950 bg-opacity-90 shadow-lg sticky top-0 z-50">
+        <div class="text-left">
+            <h1 class="text-2xl font-bold text-cyan-400">Coffee Gang</h1>
+            <p class="text-sm text-cyan-300">Kde se kafe a komunita pot-káva-jí!</p>
         </div>
         <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#poll">Poll</a></li>
-                <li><a href="#rules">Rules</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="https://discord.gg/kj43T3t46A" class="join-button">Join Discord</a></li>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-cyan-50 hover:text-cyan-300 font-semibold">About</a></li>
+                <li><a href="#poll" class="text-cyan-50 hover:text-cyan-300 font-semibold">Poll</a></li>
+                <li><a href="#rules" class="text-cyan-50 hover:text-cyan-300 font-semibold">Rules</a></li>
+                <li><a href="#support" class="text-cyan-50 hover:text-cyan-300 font-semibold">Support</a></li>
+                <li><a href="#reviews" class="text-cyan-50 hover:text-cyan-300 font-semibold">Reviews</a></li>
+                <li>
+                    <a href="https://discord.gg/kj43T3t46A" 
+                       class="px-4 py-2 border-2 border-cyan-400 text-cyan-400 rounded-full font-bold hover:bg-cyan-400 hover:text-blue-950">
+                        Join Discord
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Coffee Gang</h2>
-        <p>
+    <section id="about" class="text-center py-16 px-10 bg-blue-950 bg-opacity-90">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">About Coffee Gang</h2>
+        <p class="max-w-2xl mx-auto text-cyan-200 leading-relaxed mb-6">
             VÍtej v <strong>Coffee Gang</strong>, nejlepší Discord komunita pro kávové nadšence! Ať už jsi milovník espressa, americano, frappé, ledové kávy nebo latte, připoj se komunitu, která je prostě v klidu!  
             <br><br>
             Jsme nová komunita takže by jsme si <strong>HODNĚ</strong> vážili, pokud by jsi se připojil :D
         </p>
-        <a href="https://discord.gg/kj43T3t46A" class="join-button">Join Discord</a>
+        <a href="https://discord.gg/kj43T3t46A" 
+           class="px-6 py-2 bg-cyan-400 text-blue-950 font-bold rounded-full shadow-md hover:bg-cyan-300">
+            Join Discord
+        </a>
     </section>
 
     <!-- Poll Section -->
-    <section id="poll" class="section">
-        <h2>Náš průzkum!</h2>
-        <div id="poll-container">
-            <form id="poll-form">
-                <label for="poll-question" class="poll-question">Co je tvé oblíbené kafe?</label>
-                <div class="poll-options">
-                    <label>
-                        <input type="radio" name="coffee" value="Espresso"> Espresso
-                    </label>
-                    <label>
-                        <input type="radio" name="coffee" value="Latte"> Latte
-                    </label>
-                    <label>
-                        <input type="radio" name="coffee" value="Cappuccino"> Cappuccino
-                    </label>
-                    <label>
-                        <input type="radio" name="coffee" value="Americano"> Americano
-                    </label>
-                </div>
-                <button type="button" class="vote-button">Hlasovat</button>
-            </form>
-        </div>
+    <section id="poll" class="py-16 px-10 text-center bg-blue-900">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Náš průzkum!</h2>
+        <form id="poll-form" class="max-w-xl mx-auto">
+            <label for="poll-question" class="block text-cyan-200 font-medium mb-4">
+                Co je tvé oblíbené kafe?
+            </label>
+            <div class="flex flex-col space-y-3 mb-6">
+                <label class="text-cyan-50">
+                    <input type="radio" name="coffee" value="Espresso" class="mr-2"> Espresso
+                </label>
+                <label class="text-cyan-50">
+                    <input type="radio" name="coffee" value="Latte" class="mr-2"> Latte
+                </label>
+                <label class="text-cyan-50">
+                    <input type="radio" name="coffee" value="Cappuccino" class="mr-2"> Cappuccino
+                </label>
+                <label class="text-cyan-50">
+                    <input type="radio" name="coffee" value="Americano" class="mr-2"> Americano
+                </label>
+            </div>
+            <button type="button" 
+                    class="px-6 py-2 bg-cyan-400 text-blue-950 font-bold rounded-full shadow-md hover:bg-cyan-300">
+                Hlasovat
+            </button>
+        </form>
     </section>
 
     <!-- Rules Section -->
-    <section id="rules" class="section">
-        <h2>Pravidla komunity</h2>
-        <div class="rules-container">
-            <button class="expand-rules-button">Show Rules</button>
-            <div class="rules-content" style="display: none;">
-                <h3>Naše pravidla</h3>
-                <ul>
+    <section id="rules" class="py-16 px-10 bg-blue-950 bg-opacity-90 text-center">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Pravidla komunity</h2>
+        <div class="max-w-xl mx-auto">
+            <button class="expand-rules-button px-4 py-2 bg-cyan-400 text-blue-950 font-bold rounded-full shadow-md hover:bg-cyan-300 mb-4">
+                Show Rules
+            </button>
+            <div class="rules-content hidden">
+                <h3 class="text-cyan-300 font-semibold mb-2">Naše pravidla</h3>
+                <ul class="text-cyan-200 text-left list-disc pl-6 mb-4">
                     <li><strong>1.</strong> Respektuj všechny členy</li>
                     <li><strong>2.</strong> Žádná diskriminace ani nenávist</li>
                     <li><strong>3.</strong> Žádné spamování</li>
@@ -78,43 +97,44 @@
                     <li><strong>6.</strong> Nepoužívejte nevhodný obsah</li>
                     <li><strong>7.</strong> Dodržujte místní zákony</li>
                 </ul>
-                <p>Více informací a role brzy!</p>
+                <p class="text-cyan-200">Více informací a role brzy!</p>
             </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="section">
-        <h2>Reviews našeho serveru!</h2>
-        <div class="reviews-container">
-            <div class="review">
-                <p class="review-text">"Sigma Ohio server připoj se jinak nejsi skibidi"</p>
-                <p class="review-author">- Nicopiko, moderátor</p>
+    <section id="reviews" class="py-16 px-10 bg-blue-900 text-center">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Reviews našeho serveru!</h2>
+        <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="review p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
+                <p class="review-text text-cyan-200">"Sigma Ohio server připoj se jinak nejsi skibidi"</p>
+                <p class="review-author text-cyan-300 mt-2">- Nicopiko, moderátor</p>
             </div>
-            <div class="review">
-                <p class="review-text">"Ti kteří ví: 💀💀"</p>
-                <p class="review-author">- Kuba, moderátor</p>
+            <div class="review p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
+                <p class="review-text text-cyan-200">"Ti kteří ví: 💀💀"</p>
+                <p class="review-author text-cyan-300 mt-2">- Kuba, moderátor</p>
             </div>
-            <div class="review">
-                <p class="review-text">"Pálí Ohřát Kafe Piju Pořád 11/10"</p>
-                <p class="review-author">- Stepyn, člen</p>
+            <div class="review p-4 bg-blue-950 bg-opacity-90 rounded-lg shadow-md">
+                <p class="review-text text-cyan-200">"Pálí Ohřát Kafe Piju Pořád 11/10"</p>
+                <p class="review-author text-cyan-300 mt-2">- Stepyn, člen</p>
             </div>
         </div>
     </section>
 
     <!-- Support Section -->
-    <section id="support" class="section">
-        <h2>Support Us</h2>
-        <div class="btc-donation">
-            <p>Líbí se ti co děláme? Podpoř nás!</p>
-            <p class="btc-address">bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</p>
-            <a class="donate-button" href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc">Open BTC Core</a>
-        </div>
+    <section id="support" class="py-16 px-10 text-center bg-blue-950 bg-opacity-90">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Support Us</h2>
+        <p class="text-cyan-200 mb-2">Líbí se ti co děláme? Podpoř nás!</p>
+        <p class="btc-address text-cyan-300 mb-4">bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</p>
+        <a class="donate-button px-6 py-2 bg-cyan-400 text-blue-950 font-bold rounded-full shadow-md hover:bg-cyan-300"
+           href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc">
+            Open BTC Core
+        </a>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>© 2024 Coffee Gang | Vše práva rezervována</p>
+    <footer class="py-4 bg-blue-950 text-center">
+        <p class="text-cyan-200 text-sm">© 2024 Coffee Gang | Vše práva rezervována</p>
     </footer>
 
     <!-- JavaScript -->
@@ -122,11 +142,10 @@
         document.addEventListener("DOMContentLoaded", function () {
             const expandRulesButton = document.querySelector('.expand-rules-button');
             const rulesContent = document.querySelector('.rules-content');
-            
+
             expandRulesButton.addEventListener('click', function () {
-                const isVisible = rulesContent.style.display === 'block';
-                rulesContent.style.display = isVisible ? 'none' : 'block';
-                expandRulesButton.textContent = isVisible ? 'Show Rules' : 'Hide Rules';
+                rulesContent.classList.toggle('hidden');
+                expandRulesButton.textContent = rulesContent.classList.contains('hidden') ? 'Show Rules' : 'Hide Rules';
             });
 
             const voteButton = document.querySelector('.vote-button');
@@ -136,5 +155,6 @@
             });
         });
     </script>
+
 </body>
 </html>
