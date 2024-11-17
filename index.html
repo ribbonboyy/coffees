@@ -42,7 +42,7 @@
         <h2>Náš průzkum!</h2>
         <div id="poll-container">
             <form id="poll-form">
-                <label for="poll-question" class="poll-question">Co je tvé oblíbené kafe??</label>
+                <label for="poll-question" class="poll-question">Co je tvé oblíbené kafe?</label>
                 <div class="poll-options">
                     <label>
                         <input type="radio" name="coffee" value="Espresso"> Espresso
@@ -67,7 +67,7 @@
         <h2>Pravidla komunity</h2>
         <div class="rules-container">
             <button class="expand-rules-button">Show Rules</button>
-            <div class="rules-content">
+            <div class="rules-content" style="display: none;">
                 <h3>Naše pravidla</h3>
                 <ul>
                     <li><strong>1.</strong> Respektuj všechny členy</li>
@@ -77,9 +77,6 @@
                     <li><strong>5.</strong> Ochrana osobních údajů</li>
                     <li><strong>6.</strong> Nepoužívejte nevhodný obsah</li>
                     <li><strong>7.</strong> Dodržujte místní zákony</li>
-                    <li><strong>8.</strong> Buďte aktivní a zapojujte se</li>
-                    <li><strong>9.</strong> Bez reklamy a marketingu</li>
-                    <li><strong>10.</strong> Dodržujte pravidla Discordu</li>
                 </ul>
                 <p>Více informací a role brzy!</p>
             </div>
@@ -123,15 +120,15 @@
     <!-- JavaScript -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Expand/Collapse Rules
             const expandRulesButton = document.querySelector('.expand-rules-button');
             const rulesContent = document.querySelector('.rules-content');
+            
             expandRulesButton.addEventListener('click', function () {
-                rulesContent.style.display = (rulesContent.style.display === 'block') ? 'none' : 'block';
-                expandRulesButton.textContent = (rulesContent.style.display === 'block') ? 'Hide Rules' : 'Show Rules';
+                const isVisible = rulesContent.style.display === 'block';
+                rulesContent.style.display = isVisible ? 'none' : 'block';
+                expandRulesButton.textContent = isVisible ? 'Show Rules' : 'Hide Rules';
             });
 
-            // Poll Submission
             const voteButton = document.querySelector('.vote-button');
             voteButton.addEventListener('click', function () {
                 const selected = document.querySelector('input[name="coffee"]:checked');
