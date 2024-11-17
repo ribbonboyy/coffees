@@ -21,6 +21,7 @@
                 <li><a href="#rules">Rules</a></li>
                 <li><a href="#support">Support</a></li>
                 <li><a href="#reviews">Reviews</a></li>
+                <li><a href="https://discord.gg/kj43T3t46A" class="invite-button">Invite</a></li>
             </ul>
         </nav>
     </header>
@@ -68,46 +69,18 @@
             <button class="expand-rules-button">Show Rules</button>
             <div class="rules-content">
                 <h3>Naše pravidla</h3>
-                <div class="rule">
-                    <h4>1. Respektuj všechny členy</h4>
-                    <p>Chovej se k ostatním s respektem a slušností. Každý má právo na vlastní názory, identitu a zkušenosti.</p>
-                </div>
-                <div class="rule">
-                    <h4>2. Žádná diskriminace ani nenávist</h4>
-                    <p>Jakákoli forma diskriminace, obtěžování nebo nenávistných projevů je zakázána. Naše komunita je bezpečným místem pro všechny.</p>
-                </div>
-                <div class="rule">
-                    <h4>3. Žádné spamování</h4>
-                    <p>Spamování je zakázáno. Nezveřejňuj nevyžádané odkazy, reklamy nebo žádosti o peníze.</p>
-                </div>
-                <div class="rule">
-                    <h4>4. Slušnost v diskuzích</h4>
-                    <p>V diskuzích se chovejte slušně a konstruktivně. Při nesouhlasu vyjadřujte svůj názor civilizovaně a s respektem k ostatním.</p>
-                </div>
-                <div class="rule">
-                    <h4>5. Ochrana osobních údajů</h4>
-                    <p>Nezveřejňujte osobní údaje jiné osoby bez jejího souhlasu. Ochrana soukromí je naší prioritou.</p>
-                </div>
-                <div class="rule">
-                    <h4>6. Nepoužívejte nevhodný obsah</h4>
-                    <p>Veškerý obsah, který je vulgární, urážlivý nebo porušuje zákony, je přísně zakázán.</p>
-                </div>
-                <div class="rule">
-                    <h4>7. Dodržujte místní zákony</h4>
-                    <p>Každý člen je odpovědný za dodržování zákonů svého regionu a respektování právních předpisů.</p>
-                </div>
-                <div class="rule">
-                    <h4>8. Buďte aktivní a zapojujte se</h4>
-                    <p>Komunita roste díky aktivním a zapojeným členům. Snažte se přispět do diskuzí a aktivit, které zde pořádáme.</p>
-                </div>
-                <div class="rule">
-                    <h4>9. Bez reklamy a marketingu</h4>
-                    <p>Žádné reklamy, marketing nebo komerční nabídky bez předchozího souhlasu správců komunity.</p>
-                </div>
-                <div class="rule">
-                    <h4>10. Dodržujte pravidla Discordu</h4>
-                    <p>Veškeré chování v našem serveru musí být v souladu s oficiálními pravidly Discordu.</p>
-                </div>
+                <ul>
+                    <li><strong>1.</strong> Respektuj všechny členy</li>
+                    <li><strong>2.</strong> Žádná diskriminace ani nenávist</li>
+                    <li><strong>3.</strong> Žádné spamování</li>
+                    <li><strong>4.</strong> Slušnost v diskuzích</li>
+                    <li><strong>5.</strong> Ochrana osobních údajů</li>
+                    <li><strong>6.</strong> Nepoužívejte nevhodný obsah</li>
+                    <li><strong>7.</strong> Dodržujte místní zákony</li>
+                    <li><strong>8.</strong> Buďte aktivní a zapojujte se</li>
+                    <li><strong>9.</strong> Bez reklamy a marketingu</li>
+                    <li><strong>10.</strong> Dodržujte pravidla Discordu</li>
+                </ul>
                 <p>Více informací a role brzy!</p>
             </div>
         </div>
@@ -118,8 +91,8 @@
         <h2>Reviews našeho serveru!</h2>
         <div class="reviews-container">
             <div class="review">
-                <p class="review-text">"sigma ohio server připoj se jinak nejsi skibidi"</p>
-                <p class="review-author">- nicopiko, moderátor</p>
+                <p class="review-text">"Sigma Ohio server připoj se jinak nejsi skibidi"</p>
+                <p class="review-author">- Nicopiko, moderátor</p>
             </div>
             <div class="review">
                 <p class="review-text">"Ti kteří ví: 💀💀"</p>
@@ -127,9 +100,10 @@
             </div>
             <div class="review">
                 <p class="review-text">"Pálí Ohřát Kafe Piju Pořád 11/10"</p>
-                <p class="review-author">- stepyn, člen</p>
+                <p class="review-author">- Stepyn, člen</p>
             </div>
         </div>
+        <button class="add-review-button">Add Your Review</button>
     </section>
 
     <!-- Support Section -->
@@ -138,7 +112,7 @@
         <div class="btc-donation">
             <p>Líbí se ti co děláme? Podpoř nás!</p>
             <p class="btc-address">bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc</p>
-            <a class="donate-button" href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc">Otevřít BTC core</a>
+            <a class="donate-button" href="bitcoin:bc1qqfrq7m0a8q77tem0zdw2xmngjjfr56d544vztc">Otevřít BTC Core</a>
         </div>
     </section>
 
@@ -149,41 +123,21 @@
 
     <!-- JavaScript -->
     <script>
-        // Wait for the DOM content to fully load before executing any scripts
         document.addEventListener("DOMContentLoaded", function () {
-
-            // Expand or collapse rules content
+            // Expand/Collapse Rules
             const expandRulesButton = document.querySelector('.expand-rules-button');
             const rulesContent = document.querySelector('.rules-content');
+            expandRulesButton.addEventListener('click', function () {
+                rulesContent.style.display = (rulesContent.style.display === 'block') ? 'none' : 'block';
+                expandRulesButton.textContent = (rulesContent.style.display === 'block') ? 'Hide Rules' : 'Show Rules';
+            });
 
-            if (expandRulesButton && rulesContent) {
-                expandRulesButton.addEventListener('click', function () {
-                    // Toggle the visibility of the rules content
-                    if (rulesContent.style.display === 'block') {
-                        rulesContent.style.display = 'none';
-                        expandRulesButton.textContent = "Show Rules";
-                    } else {
-                        rulesContent.style.display = 'block';
-                        expandRulesButton.textContent = "Hide Rules";
-                    }
-                });
-            }
-
-            // Poll submission logic
-            const pollForm = document.getElementById('poll-form');
+            // Poll Submission
             const voteButton = document.querySelector('.vote-button');
-
-            if (voteButton && pollForm) {
-                voteButton.addEventListener('click', function () {
-                    const selectedOption = pollForm.querySelector('input[name="coffee"]:checked');
-
-                    if (selectedOption) {
-                        alert(`You voted for: ${selectedOption.value}`);
-                    } else {
-                        alert("Please select an option before voting!");
-                    }
-                });
-            }
+            voteButton.addEventListener('click', function () {
+                const selected = document.querySelector('input[name="coffee"]:checked');
+                alert(selected ? `You voted for: ${selected.value}` : 'Please select an option!');
+            });
         });
     </script>
 </body>
